@@ -18,8 +18,8 @@ class Quadrado:
 
 # objeto do calculo da area
     @property
-    def areaQuadrado(self):
-        return self.lado = lado * lado
+    def areaQuadrado(self, lado):
+        return self.lado * lado
 # resposta
     def respostaQuadrado(self):
         print(f'A área do quadrado é {self.areaQuadrado} ')
@@ -32,8 +32,8 @@ class Retangulo:
 
 
     @property
-    def areaRetangulo(self):
-        return self.largura = largura * largura
+    def areaRetangulo(self, largura):
+        return self.largura * largura
 
 
     def respostaRetangulo(self):
@@ -42,12 +42,13 @@ class Retangulo:
 
 class Circulo:
     def __init__(self, raio):
-        self.lado = lado
+        self.raio = raio
 
 
     @property
-    def areaCirculo(self):
-        return self.raio = (raio * 3.14) ** 2 
+    def areaCirculo(self, raio):
+        self.raio = (raio * 3.14) ** 2
+        return self.raio
 
 
     def respostaCirculo(self):
@@ -58,7 +59,7 @@ circulo = Circulo(10)
 retangulo =  Retangulo(8)
 
 
-respostaQuadrado()
-respostaRetangulo()
-respostaCirculo()
+quadrado.respostaQuadrado()
+retangulo.respostaRetangulo()
+circulo.respostaCirculo()
 
